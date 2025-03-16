@@ -17,25 +17,23 @@ const projects: Project[] = [
     title: "Smart Attendance",
     description: "Facial recognition project that recognizes the faces of whole class from one picture. Built with MERN Stack, Python, PyTorch, openCV and TensorFlow.",
     technologies: ["Python", "React.js", "Node.js", "PyTorch", "TensorFlow", "openCV"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/dasmain/SAPythonServer",
   },
   {
     title: "Fitness Application (BeFit)",
     description: "Fitness application using Flutter as frontend for mobile application and Node.js as backend server. Utilizing mobile sensors to make a pedometer in the application and manage all health information.",
     technologies: ["Flutter", "Node.js", "Mobile Sensors", "Health Tracking"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/dasmain/BeFit",
   },
   {
     title: "DICOM Viewer",
     description: "Custom DICOM Viewer using cornerstoneTools for interactive medical imaging tools. Handled DICOM files in React.js with features for loading, manipulating, and displaying images.",
     technologies: ["React.js", "cornerstoneTools", "DICOM", "AWS S3"],
-    githubUrl: "#",
   },
   {
     title: "Clue By Candlelight",
     description: "A MERN Stack project for reading books and finding clues from them to solve murder mysteries.",
     technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    githubUrl: "#",
   }
 ];
 
