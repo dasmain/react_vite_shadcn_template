@@ -4,6 +4,8 @@ import { ArrowDown } from "lucide-react";
 import AnimatedText from "./ui/AnimatedText";
 import ProfilePicture from '../../public/gitlul.jpeg';
 
+import { Github } from "lucide-react";
+
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -62,6 +64,13 @@ const Hero = () => {
                 className="px-6 py-3 rounded-full bg-secondary text-secondary-foreground font-medium transition-transform hover:scale-105"
               >
                 View My Work
+              </a>
+              <a
+                href="https://github.com/dasmain"
+                className="px-6 py-3 rounded-full flex gap-x-3 bg-secondary text-secondary-foreground font-medium transition-transform hover:scale-105"
+              >
+                <Github color="lightblue" size={20} />
+                Github
               </a>
             </div>
           </div>
