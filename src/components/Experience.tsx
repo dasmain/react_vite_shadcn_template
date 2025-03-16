@@ -25,7 +25,7 @@ const experiences: Job[] = [
     ]
   },
   {
-    company: "Dijinx",
+company: "Dijinx",
     role: "MERN Stack Developer",
     period: "September 2023 - July 2024",
     website: "https://www.dijinx.com",

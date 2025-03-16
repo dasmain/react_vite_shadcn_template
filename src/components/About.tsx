@@ -65,7 +65,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="p-6 rounded-2xl bg-background/80 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll">
                 <h3 className="text-xl font-semibold mb-2">Location</h3>
-                <p className="text-muted-foreground">Your Location</p>
+                <p className="text-muted-foreground">Karachi, Sindh, Pakistan</p>
               </div>
               <div className="p-6 rounded-2xl bg-background/80 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-100">
                 <h3 className="text-xl font-semibold mb-2">Education</h3>
@@ -74,11 +74,11 @@ const About = () => {
               </div>
               <div className="p-6 rounded-2xl bg-background/80 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-200">
                 <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                <p className="text-muted-foreground">Your Phone Number</p>
+                <p className="text-muted-foreground">+92 332 2829893</p>
               </div>
               <div className="p-6 rounded-2xl bg-background/80 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-300">
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <p className="text-muted-foreground">Your Email</p>
+                <p className="text-muted-foreground">shaikhdiyanali01@gmail.com</p>
               </div>
             </div>
             <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-400">

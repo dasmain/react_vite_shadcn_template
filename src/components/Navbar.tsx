@@ -27,9 +27,9 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:email@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/dasmain", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/diyan-ali-shaikh-8ba62a1b4/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:shaikhdiyanali01@gmail.com", label: "Email" },
   ];
 
   return (

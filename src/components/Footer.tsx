@@ -38,7 +38,7 @@ const Footer = () => {
           
           <div className="flex space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/dasmain"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -47,7 +47,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/diyan-ali-shaikh-8ba62a1b4/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -56,7 +56,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:email@example.com"
+              href="mailto:shaikhdiyanali@01.com"
               aria-label="Email"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >

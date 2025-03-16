@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 import AnimatedText from "./ui/AnimatedText";
+import ProfilePicture from '../../public/gitlul.jpeg';
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -68,7 +69,8 @@ const Hero = () => {
           <div className="w-full md:w-2/5 opacity-0 animate-on-scroll animate-delay-400">
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
-                <div className="text-8xl font-display font-bold text-foreground/10">DS</div>
+                {/* <div className="text-8xl font-display font-bold text-foreground/10">DS</div> */}
+                <img src={ProfilePicture} className="w-[80%]  object-contain" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-xl shadow-elevated">
                 <div className="flex items-center space-x-2">

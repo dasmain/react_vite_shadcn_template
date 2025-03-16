@@ -21,8 +21,8 @@ const skillCategories: SkillCategory[] = [
     skills: ["MongoDB", "SQL", "NoSQL", "Data Modeling"]
   },
   {
-    name: "DevOps & Tools",
-    skills: ["AWS", "Git", "CI/CD", "Docker"]
+    name: "DevOps/Tools",
+    skills: ["AWS", "Git", "CI/CD"]
   }
 ];
 
