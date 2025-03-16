@@ -12,8 +12,8 @@ const Glass = ({ children, className, dark = false, ...props }: GlassProps) => {
   return (
     <div
       className={cn(
-        dark ? "glass-dark" : "glass",
         "rounded-2xl shadow-glass",
+        dark ? "glass-dark" : "glass",
         className
       )}
       {...props}
