@@ -1,8 +1,7 @@
-
 import React, { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 import AnimatedText from "./ui/AnimatedText";
-import ProfilePicture from '../../public/gitlul.jpeg';
+import ProfilePicture from "../../public/gitlul.jpeg";
 
 import { Github } from "lucide-react";
 
@@ -22,7 +21,8 @@ const Hero = () => {
       { threshold: 0.1 }
     );
 
-    const elements = containerRef.current?.querySelectorAll(".animate-on-scroll");
+    const elements =
+      containerRef.current?.querySelectorAll(".animate-on-scroll");
     elements?.forEach((el) => observer.observe(el));
 
     return () => {
@@ -37,7 +37,10 @@ const Hero = () => {
       <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-blob -z-10"></div>
       <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl animate-blob animation-delay-2000 -z-10"></div>
 
-      <div ref={containerRef} className="container max-w-6xl mx-auto text-center md:text-left">
+      <div
+        ref={containerRef}
+        className="container max-w-6xl mx-auto text-center md:text-left"
+      >
         <div className="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0 md:space-x-8">
           <div className="w-full md:w-3/5">
             <div className="mb-6 opacity-0 animate-on-scroll">
@@ -49,8 +52,10 @@ const Hero = () => {
               <span className="gradient-text">Diyan Ali Shaikh</span>
             </h1>
             <p className="body-lg text-muted-foreground mb-8 max-w-2xl opacity-0 animate-on-scroll animate-delay-200">
-              With experience in building scalable web applications using MongoDB, Express.js, React, and Node.js, 
-              I create seamless user experiences with clean, maintainable code.
+              With expertise in building scalable web applications and machine
+              learning solutions using MongoDB, Express.js, React, Node.js, and
+              Python, I create seamless user experiences with clean, efficient,
+              and maintainable code.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 opacity-0 animate-on-scroll animate-delay-300">
               <a
@@ -84,7 +89,9 @@ const Hero = () => {
               <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-xl shadow-elevated">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span className="text-sm font-medium">Available for work</span>
+                  <span className="text-sm font-medium">
+                    Available for work
+                  </span>
                 </div>
               </div>
             </div>

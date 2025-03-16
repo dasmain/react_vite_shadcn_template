@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import { Building2, ExternalLink } from "lucide-react";
 import Glass from "./ui/Glass";
@@ -21,18 +20,18 @@ const experiences: Job[] = [
       "DICOM Viewer Development: Built a custom DICOM Viewer using cornerstoneTools for interactive medical imaging tools. Handled DICOM files in React.js with features for loading, manipulating, and displaying images.",
       "API Development: Built Python and Node.js APIs for data management, authentication, and external service interactions, including DICOM standard API development for handling medical imaging data with pydicom and AWS S3 integration.",
       "Custom Text Editors: Developed custom text editors within radiologist portals and applications to enhance documentation efficiency and support medical-specific formatting needs.",
-      "Research and Development: Given the complex requirements of healthcare projects, performed extensive research to analyze and integrate diverse data sources."
-    ]
+      "Research and Development: Given the complex requirements of healthcare projects, performed extensive research to analyze and integrate diverse data sources.",
+    ],
   },
   {
-company: "Dijinx",
+    company: "Dijinx",
     role: "MERN Stack Developer",
     period: "September 2023 - July 2024",
     website: "https://www.dijinx.com",
     description: [
       "Clue By Candlelight: Built a MERN Stack project for reading books and finding clues from them to solve murder mysteries.",
-      "Scavenger Hunt Server: A Node.js backend server for a mobile application game."
-    ]
+      "Scavenger Hunt Server: A Node.js backend server for a mobile application game.",
+    ],
   },
   {
     company: "SoftFit Technologies",
@@ -40,9 +39,9 @@ company: "Dijinx",
     period: "July 2023 - September 2023",
     website: "https://www.softfit.net/",
     description: [
-      "HR Management System: Used ASP.NET to maintain and troubleshoot the application, fixing bugs and ensuring smooth functionality."
-    ]
-  }
+      "HR Management System: Used ASP.NET to maintain and troubleshoot the application, fixing bugs and ensuring smooth functionality.",
+    ],
+  },
 ];
 
 const Experience = () => {
@@ -53,7 +52,8 @@ const Experience = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const elements = entry.target.querySelectorAll(".animate-on-scroll");
+            const elements =
+              entry.target.querySelectorAll(".animate-on-scroll");
             elements.forEach((el, index) => {
               setTimeout(() => {
                 el.classList.add("animate-slide-up");
@@ -88,7 +88,8 @@ const Experience = () => {
             My Professional Journey
           </h2>
           <p className="body-lg text-muted-foreground max-w-3xl mx-auto opacity-0 animate-on-scroll">
-            A track record of delivering exceptional digital solutions across various industries.
+            A track record of delivering exceptional digital solutions across
+            various industries.
           </p>
         </div>
 
@@ -135,7 +136,7 @@ const Experience = () => {
                       ))}
                     </ul>
                   </Glass>
-                  
+
                   {/* Timeline dot */}
                   <div className="hidden md:block absolute top-1/2 -translate-y-1/2 left-0 md:left-auto md:right-0 w-4 h-4 bg-primary rounded-full transform md:-translate-x-1/2 md:translate-x-1/2"></div>
                 </div>
