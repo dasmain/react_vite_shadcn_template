@@ -1,7 +1,7 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import Glass from "./ui/Glass";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -20,21 +20,54 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   // Simulate form submission
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     setIsSubmitted(true);
+  //     setFormData({ name: "", email: "", message: "" });
+
+  //     // Reset submission status after 5 seconds
+  //     setTimeout(() => {
+  //       setIsSubmitted(false);
+  //     }, 5000);
+  //   }, 1500);
+  // };
+
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
-      
-      // Reset submission status after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+  
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Access from .env
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setIsSubmitting(false);
+          setIsSubmitted(true);
+          setFormData({ name: "", email: "", message: "" });
+  
+          setTimeout(() => {
+            setIsSubmitted(false);
+          }, 5000);
+        },
+        (error) => {
+          console.error("Email sending failed:", error);
+          setIsSubmitting(false);
+        }
+      );
   };
 
   useEffect(() => {
@@ -42,7 +75,8 @@ const Contact = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const elements = entry.target.querySelectorAll(".animate-on-scroll");
+            const elements =
+              entry.target.querySelectorAll(".animate-on-scroll");
             elements.forEach((el, index) => {
               setTimeout(() => {
                 el.classList.add("animate-slide-up");
@@ -67,7 +101,11 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="section-p bg-gradient-to-b from-background to-secondary/30">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className="section-p bg-gradient-to-b from-background to-secondary/30"
+    >
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-4 opacity-0 animate-on-scroll">
@@ -84,7 +122,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2 space-y-8 opacity-0 animate-on-scroll">
             <h3 className="heading-sm mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -92,10 +130,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-muted-foreground">shaikhdiyanali01@gmail.com</p>
+                  <p className="text-muted-foreground">
+                    shaikhdiyanali01@gmail.com
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="text-primary" size={20} />
@@ -105,39 +145,59 @@ const Contact = () => {
                   <p className="text-muted-foreground">+92 332 829893</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="text-primary" size={20} />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Location</h4>
-                  <p className="text-muted-foreground">Karachi, Sindh, Pakistan</p>
+                  <p className="text-muted-foreground">
+                    Karachi, Sindh, Pakistan
+                  </p>
                 </div>
               </div>
             </div>
-            
+
             <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5">
-              <h4 className="font-semibold mb-4">Let's build something amazing together!</h4>
+              <h4 className="font-semibold mb-4">
+                Let's build something amazing together!
+              </h4>
               <p className="text-muted-foreground">
-                I'm currently available for new projects and collaborations. Whether you have a specific project in mind or just want to explore possibilities, I'd be happy to discuss how we can work together.
+                I'm currently available for new projects and collaborations.
+                Whether you have a specific project in mind or just want to
+                explore possibilities, I'd be happy to discuss how we can work
+                together.
               </p>
             </div>
           </div>
-          
+
           <div className="lg:col-span-3 opacity-0 animate-on-scroll animate-delay-200">
             <Glass className="p-8">
               <h3 className="heading-sm mb-6">Send me a message</h3>
-              
+
               {isSubmitted ? (
                 <div className="text-center py-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-500 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </div>
                   <h4 className="text-xl font-semibold mb-2">Message Sent!</h4>
-                  <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                  <p className="text-muted-foreground">
+                    Thank you for reaching out. I'll get back to you as soon as
+                    possible.
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -156,7 +216,7 @@ const Contact = () => {
                       placeholder="Your name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block mb-2 font-medium">
                       Email
@@ -172,7 +232,7 @@ const Contact = () => {
                       placeholder="Your email address"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block mb-2 font-medium">
                       Message
@@ -188,7 +248,7 @@ const Contact = () => {
                       placeholder="How can I help you?"
                     ></textarea>
                   </div>
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
