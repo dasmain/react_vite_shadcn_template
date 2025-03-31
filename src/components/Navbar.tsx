@@ -20,17 +20,15 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/dasmain", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/diyan-ali-shaikh-8ba62a1b4/", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:shaikhdiyanali01@gmail.com", label: "Email" },
   ];
+
+  const user = "Diyan";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -42,7 +40,7 @@ const Navbar = () => {
       >
         <nav className="flex items-center justify-between">
           <a href="#" className="text-2xl font-display font-semibold">
-            <span className="gradient-text">Diyan</span>
+            <span className="gradient-text">{user}</span>
           </a>
 
           {/* Desktop Menu */}

@@ -22,15 +22,6 @@ const Footer = () => {
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
-            <a href="#experience" className="text-muted-foreground hover:text-foreground transition-colors">
-              Experience
-            </a>
-            <a href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">
-              Skills
-            </a>
-            <a href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
-              Projects
-            </a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </a>
@@ -54,13 +45,6 @@ const Footer = () => {
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Linkedin size={20} />
-            </a>
-            <a
-              href="mailto:shaikhdiyanali@01.com"
-              aria-label="Email"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Mail size={20} />
             </a>
           </div>
         </div>
