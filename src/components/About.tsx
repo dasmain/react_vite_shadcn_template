@@ -83,8 +83,9 @@ const About = () => {
             </div>
             <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-400">
               <h3 className="text-xl font-semibold mb-2">Achievement</h3>
-              <p className="text-muted-foreground">Merit Scholarship holder (GPA based) from 3rd - 7th Semester</p>
-            </div>
+              <p className="text-muted-foreground">- Merit Scholarship holder (GPA based) from 3rd - 7th Semester</p>
+              <p className="text-muted-foreground">- Graduated with Magna Cum Laude honors</p>
+              </div>
           </div>
         </div>
       </div>
