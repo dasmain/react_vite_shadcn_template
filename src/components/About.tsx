@@ -72,11 +72,7 @@ const About = () => {
                 <p className="text-muted-foreground">Bahria University</p>
                 <p className="text-sm text-muted-foreground">Software Engineering, 3.81 CGPA</p>
               </div>
-              <div className="p-6 rounded-2xl bg-background/80 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-200">
-                <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                <p className="text-muted-foreground">+92 332 2829893</p>
-              </div>
-              <div className="p-6 rounded-2xl bg-background/80 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-300">
+              <div className="p-6 rounded-2xl bg-background/80 shadow-sm sm:col-span-2 hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll animate-delay-300">
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
                 <p className="text-muted-foreground">shaikhdiyanali01@gmail.com</p>
               </div>
